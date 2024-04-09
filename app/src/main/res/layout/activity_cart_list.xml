@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartListActivity">
+
+    <com.example.onlineshoppingapp.utils.CustomTv
+        android:id="@+id/emptycarttv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:text="@string/your_cart_is_empty"
+        app:layout_constraintBottom_toBottomOf="@+id/checkoutll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/carlistRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/checkoutll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/checkoutll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical" >
+        <TextView
+
+            android:id="@+id/cartsubtotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sub_total"/>
+        <TextView
+
+            android:id="@+id/cartGst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gst"
+            />
+        <TextView
+
+            android:id="@+id/carttotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            />
+        <com.example.onlineshoppingapp.utils.CustomButton
+            android:layout_margin="@dimen/genericmargin"
+            android:id="@+id/checkoutbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/checkout"
+            android:layout_gravity="center"
+            />
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

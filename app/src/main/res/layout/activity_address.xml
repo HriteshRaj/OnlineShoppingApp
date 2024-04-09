@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddressActivity">
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addressrv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/addaddresslinearlayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.example.onlineshoppingapp.utils.CustomTv
+        android:id="@+id/addressisempty"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/minheight"
+        android:visibility="gone"
+        android:gravity="center"
+        android:text="@string/no_address_is_added"
+        app:layout_constraintBottom_toTopOf="@+id/addaddresslinearlayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/addaddresslinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.example.onlineshoppingapp.utils.CustomTv
+            android:id="@+id/addaddress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/minheight"
+
+            android:layout_margin="@dimen/genericmargin"
+            android:background="@drawable/border_cardview"
+            android:gravity="center"
+            android:text="@string/add_address"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashBoardFragment">
+
+    <LinearLayout
+        android:id="@+id/uppercatagory"
+        android:layout_width="0dp"
+        android:padding="@dimen/marginfromlayout"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/marginfromlayout"
+        android:weightSum="5"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+
+                android:id="@+id/tshirtcatagory"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/catagoryimageheight"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tshirt" />
+
+            <com.example.onlineshoppingapp.utils.CustomTv
+
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:text="@string/tshirts" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/hoodiecatagory"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/catagoryimageheight"
+                android:scaleType="centerCrop"
+                android:src="@drawable/hoodie"
+                app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+            <com.example.onlineshoppingapp.utils.CustomTv
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hoodies" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/postercatagory"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/catagoryimageheight"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                android:scaleType="centerCrop"
+                android:src="@drawable/poster" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/posters" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/keychaincatagory"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/catagoryimageheight"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                android:scaleType="centerCrop"
+                android:src="@drawable/keychain" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/keychains" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/figurinecatagory"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/catagoryimageheight"
+                android:src="@drawable/figurine"
+
+                app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/figurines" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uppercatagory">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dashboardrv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/each_dashboard_product" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

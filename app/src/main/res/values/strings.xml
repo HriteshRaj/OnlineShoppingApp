@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Otaku Store</string>
+    <string name="createaccount">Create Account</string>
+    <string name="Username">Enter Name</string>
+    <string name="Email">Enter Email</string>
+    <string name="Password">Enter Password</string>
+    <string name="ConfirmPassword">Confirm Password</string>
+    <string name="RedirecttoLogin">Already Have Account ? Login Now</string>
+    <string name="RedirecttoRegister">Do not have Account ? Register Now</string>
+    <string name="LoginAsSeller">Log in As Seller</string>
+    <string name="Register_button">Register</string>
+    <string name="login_button">Login</string>
+    <string name="invalidcredentials">Invalid credentials</string>
+    <string name="loginsucess">Login Success</string>
+    <string name="registersucess">Register success</string>
+
+    <string name="progressbar">Please Wait</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gender">Gender</string>
+    <string name="phonenumber">Phone number</string>
+    <string name="save">Save</string>
+    <string name="welcome">Welcome</string>
+    <string name="anime_shop">Anime Shop</string>
+    <string name="register">REGISTER</string>
+    <string name="otakustore">Otaku Store</string>
+    <string name="price">Price</string>
+    <string name="product_name">Product Name</string>
+    <string name="description">Description</string>
+    <string name="stock">Quantity</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="hello_user">Hello User</string>
+    <string name="your_orders">Your Orders</string>
+    <string name="home">Home</string>
+    <string name="address">Address</string>
+    <string name="about_us">About Us</string>
+    <string name="chat_help">Chat Help</string>
+    <string name="logout">Logout</string>
+    <string name="add">Add</string>
+    <string name="sub_total">Sub Total :</string>
+    <string name="gst">Gst:</string>
+    <string name="total">Total:</string>
+    <string name="checkout">Checkout</string>
+    <string name="gotocart">Go to cart</string>
+    <string name="_1">1</string>
+    <string name="delete">Delete</string>
+    <string name="your_cart_is_empty">Your Cart Is Empty</string>
+    <string name="outofstock">out of stock</string>
+    <string name="morethanstock">You can not add more than available stock</string>
+    <string name="figurines">Figurines</string>
+    <string name="posters">Posters</string>
+    <string name="hoodies">Hoodies</string>
+    <string name="keychains">Keychains</string>
+    <string name="tshirts">Tshirts</string>
+    <string name="ruppee">₹</string>
+    <string name="add_products_here">Add Products Here</string>
+    <string name="add_address">ADD ADDRESS</string>
+    <string name="no_address_is_added">No Address is Added</string>
+    <string name="place_order">Place Order</string>
+
+
+</resources>

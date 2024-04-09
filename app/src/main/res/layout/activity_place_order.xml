@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlaceOrderActivity">
+
+    <com.example.onlineshoppingapp.utils.CustomTv
+        android:id="@+id/selectedaddress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/minheight"
+        android:gravity="start"
+        android:text="Selected Address"
+        android:textSize="@dimen/textsize"
+        android:layout_margin="@dimen/genericmargin"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.onlineshoppingapp.utils.CustomTv
+        android:id="@+id/addressname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="@dimen/genericmargin"
+        android:text="name"
+        app:layout_constraintStart_toStartOf="@+id/AddressPhno"
+        app:layout_constraintTop_toBottomOf="@+id/selectedaddress" />
+
+
+    <com.example.onlineshoppingapp.utils.CustomTv
+        android:id="@+id/AddressPhno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/genericmargin"
+        android:text="@string/phonenumber"
+        app:layout_constraintStart_toStartOf="@+id/paymentmode"
+        app:layout_constraintTop_toBottomOf="@+id/addressinplaceorder" />
+
+    <com.example.onlineshoppingapp.utils.CustomTv
+        android:id="@+id/addressinplaceorder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/address"
+        android:layout_margin="@dimen/genericmargin"
+        app:layout_constraintEnd_toEndOf="@+id/addressname"
+        app:layout_constraintStart_toEndOf="@+id/addressname"
+        app:layout_constraintTop_toBottomOf="@+id/addressname" />
+
+    <com.example.onlineshoppingapp.utils.CustomTv
+        android:id="@+id/paymentmode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment Mode : COD "
+        android:textSize="@dimen/textsize"
+        android:layout_margin="@dimen/genericmargin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddressPhno" />
+
+    <com.example.onlineshoppingapp.utils.CustomButton
+        android:id="@+id/PlaceOrderBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/genericmargin"
+        android:text="@string/place_order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/paymentmode"
+        app:layout_constraintStart_toStartOf="@+id/paymentmode"
+        app:layout_constraintTop_toBottomOf="@+id/paymentmode" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

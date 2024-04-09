@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:background="@color/bgcolormid"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.example.onlineshoppingapp.utils.CustomTv
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/otakustore"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/marginfromlayout"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            />
+
+        <ImageView
+            android:id="@+id/addproductsbtnmain"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/genericmargin"
+
+            android:src="@drawable/baseline_add_shopping_cart_24"
+
+            />
+        <ImageView
+            android:id="@+id/yourcart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/genericmargin"
+            android:src="@drawable/baseline_shopping_cart_24"
+
+            />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:itemIconTint="@color/white"
+        android:background="@color/bgcolormid"
+        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
+
+
+
+        app:menu="@menu/bottom_nav" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+
+        app:defaultNavHost="true"
+
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:navGraph="@navigation/nav_graph" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

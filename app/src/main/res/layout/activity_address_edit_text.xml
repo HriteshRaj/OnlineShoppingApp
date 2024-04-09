@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".AddressEditTextActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:gravity="center"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/imageheight"
+            android:layout_height="@dimen/imagewidth"
+            android:src="@drawable/addressimage"
+            />
+
+        <com.example.onlineshoppingapp.utils.CustomEditText
+            android:id="@+id/AddressFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/genericmargin"
+            android:hint="Full Name"
+            android:inputType="text"
+            android:minHeight="@dimen/minheight" />
+
+        <com.example.onlineshoppingapp.utils.CustomEditText
+            android:id="@+id/AddressPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/genericmargin"
+            android:hint="PhoneNumber"
+            android:inputType="number"
+            android:minHeight="@dimen/minheight" />
+
+
+        <com.example.onlineshoppingapp.utils.CustomEditText
+            android:id="@+id/Address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/descriptionboxsize"
+            android:layout_margin="@dimen/genericmargin"
+            android:hint="address"
+            android:inputType="textMultiLine" />
+
+        <com.example.onlineshoppingapp.utils.CustomEditText
+            android:id="@+id/pincode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/genericmargin"
+            android:hint="Pin Code"
+            android:inputType="number"
+            android:minHeight="@dimen/minheight" />
+
+        <com.example.onlineshoppingapp.utils.CustomButton
+            android:id="@+id/submitaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+            android:text="Submit" />
+
+    </LinearLayout>
+
+
+</ScrollView>

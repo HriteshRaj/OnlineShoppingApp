@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ProductsDetailsActivity">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:layout_height="wrap_content"
+       >
+       <androidx.appcompat.widget.AppCompatImageView
+           android:id="@+id/productdetailsimage"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/imageheight"
+
+           android:layout_margin="@dimen/genericmargin"
+
+           />
+
+       <com.example.onlineshoppingapp.utils.CustomTv
+           android:id="@+id/productdetailsname"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+
+           android:inputType="text"
+           android:layout_margin="@dimen/genericmargin"
+
+           />
+
+       <com.example.onlineshoppingapp.utils.CustomTv
+           android:id="@+id/productdetailsprice"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textColor="#E60909"
+           android:layout_margin="@dimen/genericmargin"
+
+           />
+       <com.example.onlineshoppingapp.utils.CustomTv
+           android:id="@+id/productdetailscatagory"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+
+           android:layout_margin="@dimen/genericmargin"
+
+           />
+
+       <com.example.onlineshoppingapp.utils.CustomTv
+           android:id="@+id/productdetailsdesc"
+           android:layout_width="match_parent"
+           android:layout_height="100dp"
+           android:layout_margin="@dimen/genericmargin"
+
+
+           />
+       <com.example.onlineshoppingapp.utils.CustomTv
+           android:id="@+id/productdetailsstock"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="@dimen/genericmargin"
+
+
+           />
+
+       <com.example.onlineshoppingapp.utils.CustomButton
+           android:id="@+id/addtocart"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+
+           android:text="@string/add_to_cart"
+           android:layout_gravity="center"
+           android:visibility="visible"/>
+       <com.example.onlineshoppingapp.utils.CustomButton
+           android:background="@color/yellow"
+           android:id="@+id/Gotocart"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/gotocart"
+           android:layout_gravity="center"
+
+           android:visibility="gone"
+
+           />
+       <com.example.onlineshoppingapp.utils.CustomTv
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:textColor="@color/white"
+       android:text="@string/app_name"
+       />
+
+   </LinearLayout>
+
+
+
+
+
+
+
+
+</ScrollView>

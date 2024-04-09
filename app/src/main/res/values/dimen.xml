@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="splash_text_size">30sp</dimen>
+    <dimen name="edittextmargin">20dp</dimen>
+    <dimen name="minheight">48dp</dimen>
+    <dimen name="genericmargin">20dp</dimen>
+        <dimen name="marginfromlayout">10dp</dimen>
+
+    <dimen name="bottomnavigationfrombottom">81dp</dimen>
+
+
+    <dimen name="imageheight">300dp</dimen>
+    <dimen name="imagewidth">100dp</dimen>
+    <dimen name="cardelevation">2dp</dimen>
+    <dimen name="cardcornerradius">15dp</dimen>
+    <dimen name="linearlayoutpricenamesize">182dp</dimen>
+
+
+    <dimen name="profileimageheight">75dp</dimen>
+    <dimen name="profileimagewidth">75dp</dimen>
+
+    <dimen name="descriptionboxsize">100dp</dimen>
+    <dimen name="textsize">20sp</dimen>
+
+    <dimen name="registerimageheight">200dp</dimen>
+    <dimen name="registerimagewidth">200dp</dimen>
+
+
+    <dimen name="catagoryimageheight">100dp</dimen>
+    <dimen name="arrowheight">200dp</dimen>
+
+</resources>

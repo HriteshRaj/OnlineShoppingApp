@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/marginfromlayout"
+   android:orientation="horizontal"
+
+
+
+
+    >
+
+    <com.google.android.material.card.MaterialCardView
+
+
+
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/bgcolorgrey"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+
+
+
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+
+                    android:id="@+id/cartitemimage"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/genericmargin"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"
+
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/marginfromlayout"
+                android:orientation="vertical"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout3"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.example.onlineshoppingapp.utils.CustomTv
+                    android:id="@+id/cartitemname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginfromlayout"
+                    android:maxLength="20"
+                    android:text="@string/product_name"
+                    android:textColor="@color/black" />
+
+
+                <com.example.onlineshoppingapp.utils.CustomTv
+                    android:id="@+id/cartitemprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/marginfromlayout"
+                    android:text="@string/price"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end|center"
+                        android:layout_weight="1"
+                        android:minHeight="@dimen/minheight"
+
+                        android:src="@drawable/baseline_add_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.example.onlineshoppingapp.utils.CustomTv
+                        android:id="@+id/cartquantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/marginfromlayout"
+
+                        android:layout_weight="1"
+                        android:text="@string/_1"
+                        android:textColor="@color/black" />
+
+                    <ImageButton
+                        android:id="@+id/minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center"
+                        android:layout_weight="1"
+                        android:minHeight="@dimen/minheight"
+
+
+                        android:src="@drawable/baseline_remove_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.example.onlineshoppingapp.utils.CustomButton
+                        android:id="@+id/cartitemdelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/genericmargin"
+                        android:text="@string/delete"
+
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>
