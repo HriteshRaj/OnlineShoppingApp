@@ -19,8 +19,10 @@ import com.example.onlineshoppingapp.UserProfileActivity
 import com.example.onlineshoppingapp.models.Products
 import com.example.onlineshoppingapp.models.User
 import com.example.onlineshoppingapp.CartListActivity
+import com.example.onlineshoppingapp.MainActivity
 import com.example.onlineshoppingapp.PlaceOrderActivity
 import com.example.onlineshoppingapp.ProductsDetailsActivity
+import com.example.onlineshoppingapp.ProfileFragement
 import com.example.onlineshoppingapp.models.Address
 
 import com.example.onlineshoppingapp.utils.Constants
@@ -80,6 +82,7 @@ class FirestoreClass {
                         activity.userloggedinSucess(user)
                     }
 
+
                 }
             }
             .addOnFailureListener{
@@ -87,6 +90,33 @@ class FirestoreClass {
             }
 
     }
+    fun getUserDetails(fragment: ProfileFragement){
+        myFirestore.collection(Constants.USERS)
+            .document(getcurrentUserId()).get()
+            .addOnSuccessListener {
+                    document->
+                fragment.context?.let { context ->
+                    val user=document.toObject(User::class.java)!!
+                    val sharedPref = context.getSharedPreferences(Constants.mypreference, Context.MODE_PRIVATE)
+                    val editor: SharedPreferences.Editor = sharedPref.edit()
+                    editor.putString(Constants.loggedinusername, user.firstname)
+                    editor.putString(Constants.loggedinemail, user.email)
+                    editor.apply()
+
+                    // Invoke success callback only if fragment is still attached
+                    if (fragment.isAdded) {
+
+                        fragment.userloggedinSucess(user)
+                    }
+                }
+            }
+            .addOnFailureListener { exception ->
+                // Log the error message
+                Log.e("getUserDetails", "Error fetching user details: ${exception.message}", exception)
+            }
+    }
+
+
     fun updateUserdetails(activity: Activity,userhashmap:HashMap<String,Any>){
         myFirestore.collection(Constants.USERS).document(getcurrentUserId())
             .update(userhashmap)

@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.onlineshoppingapp.databinding.FragmentProfileFragementBinding
+import com.example.onlineshoppingapp.firestore.FirestoreClass
+import com.example.onlineshoppingapp.models.User
+import com.example.onlineshoppingapp.utils.GlideLoader
 import com.google.firebase.auth.FirebaseAuth
 
 class ProfileFragement : BaseFragment() {
@@ -51,6 +54,25 @@ class ProfileFragement : BaseFragment() {
         return binding.root
 
     }
+
+    override fun onResume() {
+        super.onResume()
+        getUserDetails()
+    }
+
+    private fun getUserDetails(){
+
+        FirestoreClass().getUserDetails(this)
+
+    }
+    fun userloggedinSucess(user: User){
+        showprogressDialog("please wait")
+GlideLoader(requireContext()).loadPicture(user.image,binding.profileimage)
+        binding.HelloUser.text="Hello " + user.firstname.toString()
+        hideprogressdialog()
+
+    }
+
 
 
 
